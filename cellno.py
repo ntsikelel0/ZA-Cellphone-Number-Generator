@@ -2,25 +2,27 @@
 author: Ntsikelelo Sonjica
 module: cellno.py
 
-Here I am making use of OOP.The program
-generates a random list of South African
-Cell Phone numbers using the following
-prefixes '073', '074' and '079'. It then
-outputs the first generated cellphone number
+The program generates a random list of 
+South African Cell Phone numbers using 
+the following prefix; '074'. It then
+outputs the generated cellphone number
 '''
 
-from random import randint;
+from random import randint; #importing randint from random
 
-class CellNo(object):
-        def cell_no(self):
-                prefix = ["073","074","079"];
-                suffix = [str(randint(1000000,9999999)) for i in range(len(prefix))];
-                cell = [];
+class CellNo(object):  #class 
+        
+        def cell_no(self): #function
+                
+                prefix = ["074"];  #Only 1 Prefix for now; it can be increased if need be
+                suffix = [str(randint(1000000,9999999)) for i in range(len(prefix))]; #For loop enhancement in case len(prefix) increase.
+                cellno = [];
                 for p in prefix:
                         for s in suffix:
-                                cell.append(p+s);
+                                cellno.append(p+s);
 
-                print(cell[0]);
+                return cellno[0]; #always print the first generated cellphone number
 
-cellnobj = CellNo();
-cellnobj.cell_no();
+if __name__ == '__main__':
+        cellnobj = CellNo();
+        print(cellnobj.cell_no());
