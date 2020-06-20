@@ -3,7 +3,7 @@ author: Ntsikelelo Sonjica
 module: cellno.py
 
 The program generates a random list of 
-South African Cell Phone numbers using 
+South African psuedo Cell Phone numbers using 
 the following prefix; '074'. It then
 outputs the generated cellphone number
 '''
